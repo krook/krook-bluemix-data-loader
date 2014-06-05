@@ -1,0 +1,17 @@
+applications:
+- name: krook-bluemix-data-loader
+  memory: 512M
+  host: krook-bluemix-data-loader
+  domain: ng.bluemix.net
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    mongodb-vt:
+      label: mongodb
+      version: '2.2'
+      plan: '100'
+      provider: core
+    postgresql-gp:
+      label: postgresql
+      version: '9.1'
+      plan: '100'
+      provider: core
